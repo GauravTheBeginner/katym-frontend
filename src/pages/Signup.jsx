@@ -15,7 +15,7 @@ function Signup  () {
     const navigate = useNavigate();
     const handleSubmit = async () => {
         try {
-          const response = await axios.post("http://localhost:3000/api/v1/user/Signup", {
+          const response = await axios.post(`https://katym-backend.onrender.com/api/v1/user/Signup`, {
             username,
             password,
             firstName,

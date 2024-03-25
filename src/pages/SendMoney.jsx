@@ -11,7 +11,7 @@ const name =searchParams.get("name")
 const [amount,setAmount] = useState("")
 const transfer = async () => {
     try {
-         await axios.post("http://localhost:3000/api/v1/account/transfer", {
+         await axios.post(`https://katym-backend.onrender.com/api/v1/account/transfer`, {
             to: id,
             amount
         }, {

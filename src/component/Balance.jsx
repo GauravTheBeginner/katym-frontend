@@ -4,19 +4,22 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 export default function Balance() {
-    const [value,setValue] = useState();
-    useEffect(()=>{
-        const fetchdata = async()=>{
-         const response = await   axios.get("http://localhost:3000/api/v1/account/balance",{
-                headers:{
-                    Authorization:"Bearer " + localStorage.getItem("token"),
-                }
-            })
-        
-         setValue(response.data.balance)
-        }
-        fetchdata()
-    },[])
+    
+
+
+const [value, setValue] = useState();
+useEffect(() => {
+    const fetchData = async () => {
+        const response = await axios.get(`https://katym-backend.onrender.com/api/v1/account/balance`, {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+        });
+
+        setValue(response.data.balance);
+    };
+    fetchData();
+}, []);
 
     return <div className="flex">
     <div className="font-bold text-lg">
