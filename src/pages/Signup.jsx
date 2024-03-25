@@ -23,6 +23,7 @@ function Signup  () {
           });
           console.log(response.data.token);
           localStorage.setItem("token",response.data.token)
+          localStorage.setItem("name",username)
           navigate("/dashboard")
         } catch (error) {
           console.error("Error signing up:", error);

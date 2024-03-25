@@ -17,6 +17,7 @@ function Signin() {
       username,password
      })
      localStorage.setItem("token",response.data.token)
+     localStorage.setItem("name",username)
      navigate("/dashboard")
     } catch (error) {
       console.log("cant find user")
