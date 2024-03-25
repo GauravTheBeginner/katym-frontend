@@ -10,7 +10,7 @@ export default function Balance() {
 const [value, setValue] = useState();
 useEffect(() => {
     const fetchData = async () => {
-        const response = await axios.get(`https://katym-backend.onrender.com/api/v1/account/balance`, {
+        const response = await axios.get(`${import.meta.env.VITE_BASEURL}api/v1/account/balance`, {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
             },

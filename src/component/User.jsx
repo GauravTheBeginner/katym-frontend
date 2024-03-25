@@ -11,7 +11,7 @@ export const Users = () => {
     const [filter,setFilter] = useState([])
 
     useEffect(()=>{
-        axios.get(`https://katym-backend.onrender.com/api/v1/user/bulk?filter=`+ filter)
+        axios.get(`${import.meta.env.VITE_BASEURL}api/v1/user/bulk?filter=`+ filter)
         .then(response => {
             setUsers(response.data.user)
         })
