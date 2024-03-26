@@ -27,6 +27,10 @@ function Signup  () {
           localStorage.setItem("token",response.data.token)
           localStorage.setItem("name",username)
           toast.success("Signup successfully")
+          setPassword("")
+          setUserName("")
+          setLastName("") 
+          serFirstName("") 
           setTimeout(() => {
             
             navigate("/dashboard")

@@ -4,10 +4,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 export default function Balance() {
-    
-
-
-const [value, setValue] = useState();
+    const [value, setValue] = useState();
 useEffect(() => {
     const fetchData = async () => {
         const response = await axios.get(`${import.meta.env.VITE_BASEURL}api/v1/account/balance`, {

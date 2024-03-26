@@ -8,6 +8,7 @@ import Update from './pages/Update';
 
 
 
+
  function App() {
   return (
  <div className=''>
@@ -19,6 +20,7 @@ import Update from './pages/Update';
     <Route path='dashboard'element={<Dashboard/>}/>
     <Route path='send' element={<SendMoney/>}/>
     <Route path='update' element={<Update/>}/>
+    
     </Routes>
    
   </Router>

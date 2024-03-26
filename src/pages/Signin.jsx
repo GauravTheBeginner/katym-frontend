@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 function Signin() {
   const [username,setUsername] = useState("")
   const [password,setPassword] =useState("")
@@ -21,6 +22,9 @@ function Signin() {
      localStorage.setItem("token",response.data.token)
      localStorage.setItem("name",username)
      toast.success("Login successfully")
+     setPassword("")
+      setUsername("")
+
      setTimeout(() => {
       
        navigate("/dashboard")

@@ -35,10 +35,13 @@ export default function Navbar() {
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
               <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
+                  <div>
+
                   <div className="flex items-center justify-center  rounded-lg bg-gray-200  px-10 py-3 mx-auto ">
                     <div className="flex flex-col justify-center h-full text-xl">
                       {user}
                     </div>
+                  </div>
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 className="text-lg font-medium leading-6 text-gray-900">User Options</h3>
@@ -48,7 +51,7 @@ export default function Navbar() {
                           
                           router('/update');
                         }}
-                        className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-slate-600 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                        className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white   sm:text-sm"
                       >
                         Update
                       </button>
@@ -62,7 +65,7 @@ export default function Navbar() {
                               router('/');
                             }, 1000);
                         }}
-                        className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-slate-600 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                        className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white   sm:text-sm"
                       >
                         Logout
                       </button>
@@ -74,7 +77,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setIsOpen(false)}
                   type="button"
-                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-slate-600 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white   sm:ml-3 sm:w-auto sm:text-sm"
                 >
                   Close
                 </button>
