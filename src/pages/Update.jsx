@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import Footer from "../component/Footer";
 
 function Update() {
     const [firstName, serFirstName] = useState("")
@@ -38,9 +39,9 @@ function Update() {
         }
     };
     return (
-        <>
+        <div className="flex flex-col   justify-between h-screen">
             <Navbar />
-            <div className="mx-auto w-auto px-8 py-10  space-y-4">
+            <div className="mx-auto max-w-xl w-auto px-8 py-10   space-y-4">
                 <ToastContainer/>
                 <div className="space-y-2 text-center">
                     <h1 className="text-3xl font-bold">Update Your Profile</h1>
@@ -83,8 +84,8 @@ function Update() {
                     Update
                 </button>
             </div>
-         
-        </>
+            <Footer/>
+        </div>
     );
 }
 
