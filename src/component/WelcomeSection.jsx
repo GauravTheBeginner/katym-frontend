@@ -37,7 +37,7 @@ export default function Component() {
                             >
                                 Sign Up
                             </Link>: <Link
-                                className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none  disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 "
+                                className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium  shadow transition-colors text-black"
                                to={"/dashboard"}
                             >
                                 Dashboard
