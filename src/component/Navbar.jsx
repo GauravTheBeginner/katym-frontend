@@ -1,16 +1,19 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const user = localStorage.getItem("name");
   const router = useNavigate();
   return (
     <div className="h-14 flex justify-between">
+      <ToastContainer/>
       <header className="px-4 lg:px-6 h-14 flex border-b-2 items-center justify-between w-full">
-        <div className="flex items-center">
+        <Link to={"/"} className="flex items-center">
           <FlagIcon className="h-6 w-6" />
           <span className="font-semibold text-xl ml-2">KaTyM  App</span>
-        </div>
+        </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <div 
             className="rounded-full h-10 w-10 bg-slate-200 flex justify-center items-center mr-2 cursor-pointer"
@@ -42,7 +45,7 @@ export default function Navbar() {
                     <div className="mt-2">
                       <button
                         onClick={() => {
-                  
+                          
                           router('/update');
                         }}
                         className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-slate-600 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
@@ -52,8 +55,12 @@ export default function Navbar() {
                       <button
                         onClick={() => {
                             //back to / home page and clear local storage
+                            toast.success("Logged out successfully")
                             localStorage.clear();
-                            router('/');
+                            setTimeout(() => {
+                              
+                              router('/');
+                            }, 1000);
                         }}
                         className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-slate-600 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
                       >

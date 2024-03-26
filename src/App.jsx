@@ -6,9 +6,11 @@ import SendMoney from './pages/SendMoney';
 import WelcomeSection from './component/WelcomeSection';
 import Update from './pages/Update';
 
+
+
  function App() {
   return (
- <>
+ <div className=''>
   <Router>
     <Routes>    
     <Route path='/' element={<WelcomeSection/>}/>
@@ -18,8 +20,9 @@ import Update from './pages/Update';
     <Route path='send' element={<SendMoney/>}/>
     <Route path='update' element={<Update/>}/>
     </Routes>
+   
   </Router>
- </>
+ </div>
   )
 }
 

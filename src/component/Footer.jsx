@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+    <div className="flex flex-col gap-2 sm:flex-row     py-5 w-full shrink-0 items-center px-4 md:px-6 border-t">
     <p className="text-xs text-gray-500 dark:text-gray-400">
      &copy; 2021 Kaytm. All rights reserved.Built with ❤️ by Gaurav
     </p>
@@ -15,7 +15,7 @@ function Footer() {
             Twitter
         </Link>
     </nav>
-</footer>
+</div>
   )
 }
 

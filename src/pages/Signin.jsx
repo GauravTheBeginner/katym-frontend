@@ -6,6 +6,8 @@ import { InputBox } from "../component/InputBox"
 import SubHeading from "../component/SubHeading"
 import axios  from "axios"
 import { useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signin() {
   const [username,setUsername] = useState("")
@@ -18,14 +20,20 @@ function Signin() {
      })
      localStorage.setItem("token",response.data.token)
      localStorage.setItem("name",username)
-     navigate("/dashboard")
+     toast.success("Login successfully")
+     setTimeout(() => {
+      
+       navigate("/dashboard")
+     }, 1000);
     } catch (error) {
+      toast.error("Error signing in")
       console.log("cant find user")
     }
      
   }
   return (
     <div className="bg-slate-300 h-screen flex justify-center">
+      <ToastContainer/>
     <div className="flex flex-col justify-center">
       <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
         <Heading label={"Sign in"} />

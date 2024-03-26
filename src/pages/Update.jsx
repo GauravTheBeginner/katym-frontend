@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Footer from "../component/Footer";
+
 import Navbar from "../component/Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 function Update() {
     const [firstName, serFirstName] = useState("")
@@ -21,9 +22,13 @@ function Update() {
                 },
             });
            
-           
-            navigate("/dashboard")
+           toast.success("Update successfully")
+           setTimeout(() => {
+            
+               navigate("/dashboard")
+           }, 1000);
         } catch (error) {
+            toast.error("Error updating profile")
             console.error("Error signing up:", error);
 
         }
@@ -31,8 +36,8 @@ function Update() {
     return (
         <>
             <Navbar />
-            <div className="mx-auto max-w-sm py-10 space-y-4">
-
+            <div className="mx-auto w-auto px-8 py-10  space-y-4">
+                <ToastContainer/>
                 <div className="space-y-2 text-center">
                     <h1 className="text-3xl font-bold">Update Your Profile</h1>
                 </div>
@@ -74,7 +79,7 @@ function Update() {
                     Update
                 </button>
             </div>
-            <Footer />
+         
         </>
     );
 }
