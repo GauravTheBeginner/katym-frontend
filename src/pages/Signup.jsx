@@ -25,7 +25,9 @@ function Signup  () {
           });
           console.log(response.data.token);
           localStorage.setItem("token",response.data.token)
-          localStorage.setItem("name",username)
+          localStorage.setItem("email",username)
+          localStorage.setItem("name",firstName)
+          localStorage.setItem("lastName",lastName)
           toast.success("Signup successfully")
           setPassword("")
           setUserName("")

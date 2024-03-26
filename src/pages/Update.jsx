@@ -27,7 +27,9 @@ function Update() {
            setPassword("")
               setLastName("")
                 serFirstName("")
-
+            localStorage.setItem("name",firstName)
+            localStorage.setItem("lastName",lastName)
+           
            setTimeout(() => {
             
                navigate("/dashboard")
