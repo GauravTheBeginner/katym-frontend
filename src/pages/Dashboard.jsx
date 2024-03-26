@@ -10,12 +10,12 @@ import { Users } from "../component/User"
 function Dashboard() {
   return (
     <div>
-    <Navbar/>
-        <div className="mt-8 mb-6 px-4 md:px-9 lg:px-9">
-            <Balance />
-            <Users/>
-        </div>
-    <Footer/>   
+      <Navbar />
+      <div className="mt-8 mb-6 px-4 md:px-9 lg:px-9">
+        <Balance />
+        <Users />
+      </div>
+      <Footer />
     </div>
   )
 }

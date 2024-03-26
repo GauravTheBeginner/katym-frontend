@@ -13,27 +13,27 @@ function Update() {
     const navigate = useNavigate();
     const handleUpdate = async () => {
         try {
-             await axios.put(`${import.meta.env.VITE_BASEURL}api/v1/user/update`, {
+            await axios.put(`${import.meta.env.VITE_BASEURL}api/v1/user/update`, {
                 password,
                 firstName,
                 lastName,
-            },{
+            }, {
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
             });
-           
-           toast.success("Update successfully")
-           setPassword("")
-              setLastName("")
-                serFirstName("")
-            localStorage.setItem("name",firstName)
-            localStorage.setItem("lastName",lastName)
-           
-           setTimeout(() => {
-            
-               navigate("/dashboard")
-           }, 1000);
+
+            toast.success("Update successfully")
+            setPassword("")
+            setLastName("")
+            serFirstName("")
+            localStorage.setItem("name", firstName)
+            localStorage.setItem("lastName", lastName)
+
+            setTimeout(() => {
+
+                navigate("/dashboard")
+            }, 1000);
         } catch (error) {
             toast.error("Error updating profile")
             console.error("Error signing up:", error);
@@ -44,7 +44,7 @@ function Update() {
         <div className="flex flex-col   justify-between h-screen">
             <Navbar />
             <div className="mx-auto max-w-xl w-auto px-8 py-10   space-y-4">
-                <ToastContainer/>
+                <ToastContainer />
                 <div className="space-y-2 text-center">
                     <h1 className="text-3xl font-bold">Update Your Profile</h1>
                 </div>
@@ -79,14 +79,14 @@ function Update() {
                     />
                 </div>
                 <button
-                onClick={handleUpdate}
+                    onClick={handleUpdate}
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium  bg-black text-white h-10 px-4 py-2 w-full"
                     type="submit"
                 >
                     Update
                 </button>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

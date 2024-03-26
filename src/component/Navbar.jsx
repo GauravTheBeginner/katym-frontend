@@ -10,14 +10,14 @@ export default function Navbar() {
   const router = useNavigate();
   return (
     <div className="h-14 flex justify-between">
-      <ToastContainer/>
+      <ToastContainer />
       <header className="px-4 lg:px-6 h-14 flex border-b-2 items-center justify-between w-full">
         <Link to={"/"} className="flex items-center">
           <FlagIcon className="h-6 w-6" />
           <span className="font-semibold text-xl ml-2">KaTyM  App</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <div 
+          <div
             className="rounded-full h-10 w-10 bg-slate-200 flex justify-center items-center mr-2 cursor-pointer"
             onClick={() => setIsOpen(true)}
           >
@@ -39,28 +39,28 @@ export default function Navbar() {
                 <div className="sm:flex sm:items-start">
                   <div className='flex flex-col space-y-3 '>
 
-                  <div className="flex items-center justify-center  rounded-lg bg-gray-200 w-full  px-10 py-3 mx-auto ">
-                    <div className="flex flex-col justify-center h-full text-xl">
-                     Email : {email}
+                    <div className="flex items-center justify-center  rounded-lg bg-gray-200 w-full  px-10 py-3 mx-auto ">
+                      <div className="flex flex-col justify-center h-full text-xl">
+                        Email : {email}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center justify-center  rounded-lg bg-gray-200 w-full  px-10 py-3 mx-auto ">
-                    <div className="flex flex-col justify-center h-full text-xl">
-                      FirstName : {name}
+                    <div className="flex items-center justify-center  rounded-lg bg-gray-200 w-full  px-10 py-3 mx-auto ">
+                      <div className="flex flex-col justify-center h-full text-xl">
+                        FirstName : {name}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center justify-center  rounded-lg w-full bg-gray-200  px-10 py-3 mx-auto ">
-                    <div className="flex flex-col justify-center h-full text-xl">
-                      LastName : {lastName}
+                    <div className="flex items-center justify-center  rounded-lg w-full bg-gray-200  px-10 py-3 mx-auto ">
+                      <div className="flex flex-col justify-center h-full text-xl">
+                        LastName : {lastName}
+                      </div>
                     </div>
-                  </div>
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 className="text-lg font-medium leading-6 text-gray-900">User Options</h3>
                     <div className="mt-2">
                       <button
                         onClick={() => {
-                          
+
                           router('/update');
                         }}
                         className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white   sm:text-sm"
@@ -69,13 +69,13 @@ export default function Navbar() {
                       </button>
                       <button
                         onClick={() => {
-                            //back to / home page and clear local storage
-                            toast.success("Logged out successfully")
-                            localStorage.clear();
-                            setTimeout(() => {
-                              
-                              router('/');
-                            }, 1000);
+                          //back to / home page and clear local storage
+                          toast.success("Logged out successfully")
+                          localStorage.clear();
+                          setTimeout(() => {
+
+                            router('/');
+                          }, 1000);
                         }}
                         className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white   sm:text-sm"
                       >

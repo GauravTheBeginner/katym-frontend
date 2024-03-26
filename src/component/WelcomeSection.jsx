@@ -1,9 +1,9 @@
 
-import { Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import Footer from "./Footer"
 
 export default function Component() {
-   
+
     const token = localStorage.getItem("token")
     return (
         <div className="flex flex-col min-h-[100dvh]">
@@ -13,10 +13,10 @@ export default function Component() {
                     <span className="font-semibold text-xl ml-2">KaTyM  App</span>
                 </div>
                 <nav className="ml-auto flex gap-4 sm:gap-6">
-                    { !token ? <Link className="inline-flex h-10 items-center justify-center rounded-md border  px-8 text-sm font-medium shadow-sm transition-colors bg-black text-white " to={"/signup"}>
-                    Sign Up
+                    {!token ? <Link className="inline-flex h-10 items-center justify-center rounded-md border  px-8 text-sm font-medium shadow-sm transition-colors bg-black text-white " to={"/signup"}>
+                        Sign Up
                     </Link> : <Link className="inline-flex h-10 items-center justify-center rounded-md border  px-8 text-sm font-medium shadow-sm transition-colors bg-black text-white " to={"/dashboard"}>
-                    Dashboard
+                        Dashboard
                     </Link>}
                 </nav>
             </header>
@@ -31,14 +31,14 @@ export default function Component() {
                             </p>
                         </div>
                         <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                            {!token ?<Link
+                            {!token ? <Link
                                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium  shadow transition-colors text-black"
                                 to={"/signup"}
                             >
                                 Sign Up
-                            </Link>: <Link
+                            </Link> : <Link
                                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium  shadow transition-colors text-black"
-                               to={"/dashboard"}
+                                to={"/dashboard"}
                             >
                                 Dashboard
                             </Link>}
@@ -53,7 +53,7 @@ export default function Component() {
                 </section>
 
             </main>
-          <Footer/>
+            <Footer />
         </div>
     )
 }
